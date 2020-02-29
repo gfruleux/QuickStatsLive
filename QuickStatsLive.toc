@@ -1,0 +1,39 @@
+## Interface: 11302
+## Name: QuickStatsLive
+## Title: QuickStatsLive
+## Notes: AddOn to quickly display statistics about your character with live updates
+## Author: Gregoire 'Verfroren' Fruleux
+## SavedVariables: QuickStatsLiveConfig
+## OptionalDeps: Ace3
+
+## X-License: GPLv3
+
+
+#Load Libs
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceAddon-3.0\AceAddon-3.0.xml
+Libs\AceEvent-3.0\AceEvent-3.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+Libs\AceLocale-3.0\AceLocale-3.0.xml
+Libs\AceConsole-3.0\AceConsole-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
+
+Modules\AceGUIContainer-QSL-DialogBox.lua
+
+#Localization
+Locales\QuickStatsLive.enUs.lua
+Locales\QuickStatsLiveLocale.lua
+
+#Load UI
+Modules\QuickStatsLiveFrame.lua
+Modules\QuickStatsLiveConfigFrame.lua
+
+#Load 'WoW API'
+Modules\QuickStatsLiveUtils.lua
+
+#Load QuickStatsLive
+Modules\QuickStatsLiveEventHandler.lua
+QuickStatsLive.lua
