@@ -1,6 +1,6 @@
 ## Interface: 11302
-## Name: QuickStatsLive
-## Title: QuickStatsLive
+## Name: QuickStatsLive-Classic
+## Title: QuickStatsLive WoW Classic
 ## Notes: AddOn to quickly display statistics about your character with live updates
 ## Author: Gregoire 'Verfroren' Fruleux
 ## SavedVariables: QuickStatsLiveConfig
