@@ -362,8 +362,8 @@ local options = {
 					type = "range",
 					order = 24,
 					width = "full",
-					name = L["Change Backdrop color"],
-					desc = L["Customize the StatBlock Backdrop color"],
+					name = L["Change Backdrop transparency"],
+					desc = L["Customize the StatBlock Backdrop transparency"],
 					min = 0,
 					max = 1,
 					get = function()
@@ -1139,7 +1139,7 @@ function QuickStatsLive:OnInitialize()
 	
 	
 	if not self.db.char.addon_loaded then	
-		print(QuickStatsLiveLocale:GetUIString('Configure QuickStatsLive by typing /#0 in your chat or open Blizzard Interface > Addons > QuickStatsLive', self.db.global.cmd))
+		print(QuickStatsLiveLocale:GetUIString('Configure QuickStatsLive by typing /#0 in your chat or open Blizzard Menu with Esc > Interface > Add-ons tab > QuickStatsLive', self.db.global.cmd))
 		self.db.char.addon_loaded = true
 	end
 end

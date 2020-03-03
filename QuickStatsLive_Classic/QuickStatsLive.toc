@@ -25,6 +25,7 @@ Modules\AceGUIContainer-QSL-DialogBox.lua
 
 #Localization
 Locales\QuickStatsLive.enUs.lua
+Locales\QuickStatsLive.frFR.lua
 Locales\QuickStatsLiveLocale.lua
 
 #Load UI

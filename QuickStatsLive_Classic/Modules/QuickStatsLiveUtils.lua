@@ -268,7 +268,7 @@ function MsgUtil:PowerMax()
 	return QuickStatsLiveLocale:GetUIString("Power Max: #0", PlayerUtil:GetPowerMax());
 end
 function MsgUtil:PowerRegen()
-	return QuickStatsLiveLocale:GetUIString("Mana Regen: #0", PlayerUtil:GetPowerRegen());
+	return QuickStatsLiveLocale:GetUIString("Power Regen: #0", PlayerUtil:GetPowerRegen());
 end
 --[[function MsgUtil:ManaRegenCast()
 	return "Mana Regen Cast: " .. PlayerUtil:GetManaRegenCasting();

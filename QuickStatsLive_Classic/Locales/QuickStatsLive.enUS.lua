@@ -1,6 +1,6 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("QuickStatsLive", "enUS", true)
 
-L["Configure QuickStatsLive by typing /#0 in your chat or open Blizzard Interface > Addons > QuickStatsLive"] = true 
+L["Configure QuickStatsLive by typing /#0 in your chat or open Blizzard Menu with Esc > Interface > Add-ons tab > QuickStatsLive"] = true
 L[" "] = true
 
 -- Config Tab
@@ -9,11 +9,11 @@ L["Show StatBlock"] = true
 L["Show or hide QuickStatsLive' StatBlock."] = true
 L["QuickStatsLive works with a text block, named 'StatBlock', filled with selected informations. You can move the StatBlock, and change the text and background colors."] = true
 
-L["QuickStatsLive 'By Class' tab are default display options, shared accross your account so every new character's StatBlock will already have the corresponding class options displayed."] = true
+L["QuickStatsLive 'By Class' tab are default display options, shared across your account so every new character's StatBlock will already have the corresponding class options displayed."] = true
 L["QuickStatsLive 'By Char' tab allows you to override the class options, so your actual character can have a custom display options."] = true
 
 L["Change command line"] = true
-L["Customize the command name for chat acces. You don't need to provide the Slash /"] = true
+L["Customize the command name for chat access. You don't need to provide the Slash /"] = true
 
 L["Stat Block Options"] = true
 L["Change UI language"] = true
@@ -22,8 +22,8 @@ L["Allows you to move the StatBlock, or lock its position."] = true
 
 L["Change Text color"] = true
 L["Customize the StatBlock Text color"] = true
-L["Change Backdrop color"] = true
-L["Customize the StatBlock Backdrop color"] = true
+L["Change Backdrop transparency"] = true
+L["Customize the StatBlock Backdrop transparency"] = true
 
 -- Profile Tab
 L["By Class"] = true
@@ -88,7 +88,7 @@ L["Health Max: #0"] = true
 L["Health Regen: #0"] = true
 L["Power: #0"] = true
 L["Power Max: #0"] = true
-L["Mana Regen: #0"] = true
+L["Power Regen: #0"] = true
 L["Melee Dmg: #0 - #1"] = true
 L["Melee Pow: #0"] = true
 L["Melee Crit: #0%"] = true
