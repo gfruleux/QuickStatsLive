@@ -28,12 +28,16 @@ local function Frame_OnClose(frame)
 end
 
 local function Frame_OnMouseDown(frame)
-	frame:StartMoving()
+    if frame.can_move then
+	    frame:StartMoving()
+    end
 	AceGUI:ClearFocus()
 end
 
 local function Frame_OnMouseUp(frame)
-	frame:StopMovingOrSizing()
+	if frame.can_move then
+	    frame:StopMovingOrSizing()
+    end
 	AceGUI:ClearFocus()
 end
 
@@ -104,7 +108,7 @@ local methods = {
 	
 	["EnableMovable"] = function(self, state)
 		assert(type(state) == "boolean")
-		self.frame:SetMovable(state)
+		self.frame.can_move = state
 	end,
 	
 	["SetBackdropColor"] = function(self, r, g, b, a)
@@ -125,6 +129,8 @@ local function Constructor()
 	local frame = CreateFrame("Frame", "QSLDialogBox_"..WIDGET_COUNT, UIParent)
 	WIDGET_COUNT = WIDGET_COUNT + 1
 	frame:Hide()
+
+    frame.can_move = true
 
 	frame:EnableMouse(false)
 	frame:SetMovable(true)
