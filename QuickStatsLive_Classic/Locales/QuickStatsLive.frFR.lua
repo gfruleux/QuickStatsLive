@@ -23,6 +23,8 @@ L["Allows you to move the StatBlock, or lock its position."] = "Autorise le dép
 
 L["Change Text color"] = "Changer la couleur du Texte"
 L["Customize the StatBlock Text color"] = "Personnalisez la couleur du texte du StatBlock"
+L["Change Text size"] = "Changer la taille du Texte"
+L["Customize the StatBlock Text size"] = "Personnalisez la taille du texte du StatBlock"
 L["Change Backdrop transparency"] = "Changer la transparence du fond"
 L["Customize the StatBlock Backdrop transparency"] = "Personnalisez la transparence du fond du StatBlock"
 

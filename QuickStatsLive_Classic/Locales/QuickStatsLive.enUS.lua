@@ -22,6 +22,8 @@ L["Allows you to move the StatBlock, or lock its position."] = true
 
 L["Change Text color"] = true
 L["Customize the StatBlock Text color"] = true
+L["Change Text size"] = true
+L["Customize the StatBlock Text size"] = true
 L["Change Backdrop transparency"] = true
 L["Customize the StatBlock Backdrop transparency"] = true
 

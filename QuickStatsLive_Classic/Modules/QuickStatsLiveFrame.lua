@@ -5,7 +5,8 @@ function QuickStatsLiveFrame:Create()
 	local frame = AceGUI:Create("QSLDialogBox")
 
 	local label = AceGUI:Create("Label")
-	label:SetFont("Fonts\\FRIZQT__.ttf", 12)
+	label:SetFont(STANDARD_TEXT_FONT, 12)
+	label:SetRelativeWidth(1)
 	frame:AddChild(label)
 
 	local this = {}
@@ -13,23 +14,20 @@ function QuickStatsLiveFrame:Create()
 	this._label = label
 
 	function this:ReDraw(inputMap)
-		local count, width = 1, 1
 		local frame = self._frame
 		local label = self._label
 		local str = ""
 		
 		for idx, text in next, inputMap do
-			count = count + 1
 			str = str .. "\n" .. text
-			width = math.max(width, strlen(text))
 		end
 		
 		label:SetText(str)
 		
 		local height = label.label:GetHeight()
 		local width = label.label:GetStringWidth()
-		frame:SetHeight(height + 2)
-		frame:SetWidth(width + 10)
+		frame:SetHeight(height)
+		frame:SetWidth(width + 5)
 	end
 
 	function this:Hide()
@@ -51,6 +49,10 @@ function QuickStatsLiveFrame:Create()
 	function this:ColorizeBackdrop(r, g, b, a)
 		self._frame:SetBackdropColor(0, 0, 0, a)
 	end
+
+    function this:SetFont(name, size)
+        self._label:SetFont(name, size)
+    end
 
 	return this
 end

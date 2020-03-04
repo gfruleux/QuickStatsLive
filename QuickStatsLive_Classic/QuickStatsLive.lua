@@ -62,6 +62,10 @@ _QuickStatsLiveOptions.defaults = {
 		selected_class = Player.class.fileName,
 		debug = false,
 		cmd = 'quickstatslive',
+		text = {
+		    font_size = 12,
+		    font_name = STANDARD_TEXT_FONT,
+		},
 		rgba = {
 			text = {
 				r = 1.0,
@@ -249,6 +253,10 @@ function QuickStatsLive:Colorize()
 	self.liveFrame:ColorizeText(self.db.global.rgba.text.r, self.db.global.rgba.text.g, self.db.global.rgba.text.b)
 	self.liveFrame:ColorizeBackdrop(self.db.global.rgba.backdrop.r, self.db.global.rgba.backdrop.g, self.db.global.rgba.backdrop.b, self.db.global.rgba.backdrop.a)
 end
+function QuickStatsLive:UpdateFont()
+    self.liveFrame:SetFont(self.db.global.text.font_name, self.db.global.text.font_size)
+    self:UpdateUI()
+end
 
 -- Blizzard AddOn-Interface Frame 'content'
 local options = {
@@ -358,9 +366,27 @@ local options = {
 						QuickStatsLive:Colorize()
 					end,
 				},
+				text_font_size_pick = {
+				    type = "range",
+				    order = 24,
+				    width = "full",
+				    name = L["Change Text size"],
+				    desc = L["Customize the StatBlock Text size"],
+				    min = 8,
+				    max = 20,
+				    step = 1,
+				    get = function()
+				        return QuickStatsLive.db.global.text.font_size
+                    end,
+                    set = function(input, val)
+                        QuickStatsLive.db.global.text.font_size = val
+                        QuickStatsLive:UpdateFont()
+                    end,
+
+				},
 				backdrop_color_pick = {
 					type = "range",
-					order = 24,
+					order = 25,
 					width = "full",
 					name = L["Change Backdrop transparency"],
 					desc = L["Customize the StatBlock Backdrop transparency"],
@@ -1100,9 +1126,10 @@ function QuickStatsLive:OnInitialize()
 
 	-- Main Frame display
 	self.liveFrame = QuickStatsLiveFrame:Create()
+	self.liveFrame:SetMovable(self.db.char.frame_move_enabled)
 	self:FrameDisplay(self.db.char.frame_enabled)
 	self:Colorize()
-	self.liveFrame:SetMovable(self.db.char.frame_move_enabled)
+	self:UpdateFont()
 
 	-- Force default class
 	self.db.global.selected_class = Player.class.fileName
